@@ -1,37 +1,39 @@
-
 # Conversor de Unidades
 
 Este é um simples conversor de unidades desenvolvido em Ruby. A aplicação oferece várias opções de conversão entre diferentes unidades de medida, permitindo ao usuário escolher a conversão desejada e fornecer os valores para o cálculo.
+
+## Estruturas Utilizadas
+
+O código foi desenvolvido utilizando as seguintes estruturas:
+
+- **Funções:** Cada conversão é implementada em uma função separada, facilitando a organização e a reutilização do código.
+- **Loops:** `Loop do` são utilizados para manter a interação com o usuário até que ele decida sair do programa, permitindo múltiplas conversões sem reiniciar o script.
+- **Estruturas de Decisão:** Condicionais `if/else` e `case/when` são usadas para gerenciar o fluxo do programa, decidindo qual operação realizar com base na entrada do usuário.
 
 ## Funcionalidades
 
 O conversor atualmente suporta as seguintes conversões:
 
 1. **Temperatura**
-   - Celcius -> Fahrenheit
-   - Fahrenheit -> Celcius
+   - Celsius -> Fahrenheit
+
 2. **Velocidade**
    - m/s -> km/h
-   - km/h -> m/s
+
 3. **Comprimento**
    - Pés -> Metros
-   - Metros -> Pés
+   - Polegadas -> Centímetros
+   - Jardas -> Metros
 
-As seguintes funcionalidades estão em implementação e serão adicionadas em futuras versões:
+4. **Área**
+   - Hectares -> Metros quadrados
 
-- **Comprimento**
-  - Polegadas -> Centímetros
-  - Jardas -> Metros
+5. **Distância**
+   - Milhas -> Quilômetros
 
-- **Área**
-  - Hectares -> Metros quadrados
-
-- **Distância**
-  - Milhas -> Metros
-
-- **Peso**
-  - Quilogramas -> Onças
-  - Quilogramas -> Libras
+6. **Peso**
+   - Gramas -> Onças
+   - Quilogramas -> Libras
 
 ## Como usar
 
@@ -53,8 +55,7 @@ As seguintes funcionalidades estão em implementação e serão adicionadas em f
 
 Ao iniciar o script, você verá o seguinte menu:
 
-1 - Celcius -> Fahrenheit; 2 - m/s -> km/h; 3 - pés -> m; 4 - pol -> cm; 5 - hectare -> m²; 6 - milha -> m; 7 - jarda -> m; 8 - kg -> onça; 9 - kg -> libra; 0 - Sair
-
+1 - Celsius -> Fahrenheit; 2 - m/s -> km/h; 3 - Pés -> Metros; 4 - Polegadas -> Centímetros; 5 - Hectares -> Metros quadrados; 6 - Milhas -> Quilômetros; 7 - Jardas -> Metros; 8 - Gramas -> Onças; 9 - Quilogramas -> Libras; 0 - Sair.
 
 ```
 shell
