@@ -37,7 +37,7 @@ As seguintes funcionalidades estão em implementação e serão adicionadas em f
 
 1. Clone este repositório:
     ```sh
-    git clone <https://github.com/Coriolando-Medeiros/conversor_unidades>
+    git clone https://github.com/Coriolando-Medeiros/conversor_unidades
     ```
 2. Navegue até o diretório do projeto:
     ```sh
@@ -55,8 +55,9 @@ Ao iniciar o script, você verá o seguinte menu:
 
 1 - Celcius -> Fahrenheit; 2 - m/s -> km/h; 3 - pés -> m; 4 - pol -> cm; 5 - hectare -> m²; 6 - milha -> m; 7 - jarda -> m; 8 - kg -> onça; 9 - kg -> libra; 0 - Sair
 
-shell
+
 ```
+shell
 
 Escolha a opção desejada digitando o número correspondente e siga as instruções para realizar a conversão.
 ```
