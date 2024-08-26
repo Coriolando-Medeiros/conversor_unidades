@@ -5,9 +5,9 @@ def menu
   puts "3 - pés -> m"
   puts "4 - pol -> cm"
   puts "5 - hectare -> m²"
-  puts "6 - milha -> m"
+  puts "6 - milha -> km"
   puts "7 - jarda -> m"
-  puts "8 - kg -> onça"
+  puts "8 - g -> onça"
   puts "9 - kg -> libra"
   puts "0 - Sair"
   opcao = gets.chomp
@@ -23,11 +23,11 @@ def menu
   when '5'
     hectare_m
   when '6'
-    milha_m
+    milha_km
   when '7'
     jarda_m
   when '8'
-    kg_onca
+    g_onca
   when '9'
     kg_libra
   when '0'
@@ -124,27 +124,178 @@ def pes_m
 end
 
 def pol_cm
-  puts "Em implementação"
+  loop do
+    puts "Menu"
+    puts "1 - polegadas -> cm"
+    puts "2 - cm -> polegadas"
+    puts "0 - sair"
+    opcao = gets.chomp
+    if opcao == '1'
+      puts "Cumprimento"
+      print "Polegadas: "
+      polegadas = gets.chomp.to_f
+      centimetros = polegadas * 2.54
+      puts "Polegadas: #{'%.2f' % polegadas}"
+      puts "Centímetros: #{'%.2f' % centimetros}"
+    elsif opcao == '2'
+      puts "Cumprimento"
+      print "Centímetros: "
+      centimetros = gets.chomp.to_f
+      polegadas = centimetros * 0.393701
+      puts "Centímetros: #{'%.2f' % centimetros}"
+      puts "Polegadas: #{'%.2f' % polegadas}"
+    elsif opcao == '0'
+      break
+    else
+      puts "Opção inválida, Tente novamente!"
+    end
+  end
 end
 
 def hectare_m
-  puts "Em implementação"
+  loop do
+    puts "Menu"
+    puts "1 - hectare -> m²"
+    puts "2 - m² -> hectare"
+    puts "0 - sair"
+    opcao = gets.chomp
+    if opcao == '1'
+      puts "Área"
+      print "Hectare: "
+      hectare = gets.chomp.to_f
+      m_quadrado = hectare * 10000
+      puts "hectare: #{'%.2f' % hectare}"
+      puts "M²: #{'%.2f' % m_quadrado}"
+    elsif opcao == '2'
+      puts "Área"
+      print "M²: "
+      m_quadrado = gets.chomp.to_f
+      hectare = m_quadrado / 10000
+      puts "M²: #{'%.2f' % m_quadrado}"
+      puts "hectare: #{'%.2f' % hectare}"
+    elsif opcao == '0'
+      break
+    else
+      puts "Opção inválida, Tente novamente!"
+    end
+  end
+
 end
 
-def milha_m
-  puts "Em implementação"
+def milha_km
+  loop do 
+    puts "Menu"
+    puts "1 - milhas -> km"
+    puts "2 - km -> milhas"
+    puts "0 - sair"
+    opcao = gets.chomp
+    if opcao == '1'
+      puts "Cumprimento"
+      print "milhas: "
+      milhas = gets.chomp.to_f
+      km = milhas * 1.60934
+      puts "milhas: #{'%.2f' % milhas}"
+      puts "km: #{'%.2f' % km}"
+    elsif opcao == '2'
+      puts "Cumprimento"
+      print "km: "
+      km = gets.chomp.to_f
+      milhas = km * 0.621371
+      puts "km: #{'%.2f' % km}"
+      puts "milhas: #{'%.2f' % milhas}"
+    elsif opcao == '0'
+      break
+    else
+      puts "Opção inválida, Tente novamente!"
+    end
+  end
 end
 
 def jarda_m
-  puts "Em implementação"
+  loop do
+    puts "Menu"
+    puts "1 - jardas -> metros"
+    puts "2 - metros -> jardas"
+    puts "0 - sair"
+    opcao = gets.chomp
+    if opcao == '1'
+      puts "Cumprimento"
+      print "jardas: "
+      jardas = gets.chomp.to_f
+      metros = jardas * 0.9144
+      puts "jardas: #{'%.2f' % jardas}"
+      puts "metros: #{'%.2f' % metros}"
+    elsif opcao == '2'
+      puts "Cumprimento"
+      print "metros: "
+      metros = gets.chomp.to_f
+      jardas = metros * 1.09361
+      puts "metros: #{'%.2f' % metros}"
+      puts "jardas: #{'%.2f' % jardas}"
+    elsif opcao == '0'
+      break
+    else
+      puts "Opção inválida, Tente novamente!"
+    end
+  end
 end
 
-def kg_onca
-  puts "Em implementação"
+def g_onca
+  loop do
+    puts "Menu"
+    puts "1 - gramas -> onça"
+    puts "2 - onça -> gramas"
+    puts "0 - sair"
+    opcao = gets.chomp
+    if opcao == '1'
+      puts "Massa"
+      print "gramas: "
+      gramas = gets.chomp.to_f
+      oncas = gramas * 0.035274
+      puts "gramas: #{'%.2f' % gramas}"
+      puts "onças: #{'%.2f' % oncas}"
+    elsif opcao == '2'
+      puts "Massa"
+      print "onças: "
+      oncas = gets.chomp.to_f
+      gramas = oncas * 28.3495
+      puts "onças: #{'%.2f' % oncas}"
+      puts "gramas: #{'%.2f' % gramas}"
+    elsif opcao == '0'
+      break
+    else
+      puts "Opção inválida, Tente novamente!"
+    end
+  end
 end
 
 def kg_libra
-  puts "Em implementação"
+  loop do
+    puts "Menu"
+    puts "1 - kg -> libras"
+    puts "2 - libras -> kg"
+    puts "0 - sair"
+    opcao = gets.chomp
+    if opcao == '1'
+      puts "Massa"
+      print "kg: "
+      kg = gets.chomp.to_f
+      libras = kg * 2.20462
+      puts "kg: #{'%.2f' % kg}"
+      puts "libras: #{'%.2f' % libras}"
+    elsif opcao == '2'
+      puts "Massa"
+      print "libras: "
+      libras = gets.chomp.to_f
+      kg = libras * 0.453592
+      puts "libras: #{'%.2f' % libras}"
+      puts "kg: #{'%.2f' % kg}"
+    elsif opcao == '0'
+      break
+    else
+      puts "Opção inválida, Tente novamente!"
+    end
+  end
 end
 
 menu
